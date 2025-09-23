@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Badmintonni o\'rgatish metodikasi</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="drawer_header_text">N.N.Azimov\n\nSPORT MAHORATINI OSHIRISH\n(BADMINTON)\n\nDarslik</string>
+    <string name="about_app">Ilova haqida</string>
+    <string name="bookmarks">Foydalangan adabiyotlar</string>
+    <string name="glossary">Glossariy. Tushuncha va atamalar</string>
+    <string name="practical_materials">Amaliy mashg\'ulot materiallari</string>
+    <string name="admin">Azimov Nodir Nasilloyevich</string>
+    <string name="occupation">Ilmiy izlanuvchi</string>
+
+    <string name="about_app_text">
+        Ushbu elektron darslik badminton sport turiga oid nazariy va amaliy bilimlarni o‘quvchilar, murabbiylar hamda jismoniy tarbiya o‘qituvchilariga yetkazish maqsadida yaratilgan. Darslikning asosiy afzalliklari quyidagilardan iborat:\n\n
+
+Ta’limiy ahamiyati – badmintonning texnika va taktikasi bosqichma-bosqich izohlangan, mavzular multimedia vositalari (rasm, video, grafik) orqali yanada tushunarli qilib berilgan.\n\n
+
+Amaliy jihati – yosh badmintonchilar uchun mashqlar majmuasi, jismoniy sifatlarni rivojlantirish usullari hamda keng tarqalgan xatolarni bartaraf etish bo‘yicha ko‘rsatmalar jamlangan.\n\n
+
+Innovatsion xususiyati – interaktiv topshiriqlar, testlar va virtual mashqlar orqali bilimni mustahkamlash imkoniyati yaratilgan.\n\n
+
+Ijtimoiy foydasi – sportga qiziqishni kuchaytiradi, sog‘lom turmush tarzini shakllantirishga xizmat qiladi va murabbiy-o‘quvchi-ota-ona hamkorligini mustahkamlaydi.\n\n
+
+Xulosa qilib aytganda, elektron darslik badminton sportini o‘qitishda zamonaviy, qulay va samarali metodik vosita hisoblanadi.
+    </string>
+    <string name="tests">Testlar</string>
+</resources>
