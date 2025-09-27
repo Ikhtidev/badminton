@@ -18,6 +18,7 @@ dependencyResolutionManagement {
         mavenCentral()
         jcenter()
     }
+
 }
 
 rootProject.name = "Badminton"

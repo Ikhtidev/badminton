@@ -24,4 +24,8 @@ Ijtimoiy foydasi – sportga qiziqishni kuchaytiradi, sog‘lom turmush tarzini 
 Xulosa qilib aytganda, elektron darslik badminton sportini o‘qitishda zamonaviy, qulay va samarali metodik vosita hisoblanadi.
     </string>
     <string name="tests">Testlar</string>
+    <string name="next">Keyingi</string>
+    <string name="test_finished">Test yakunlandi</string>
+    <string name="your_result">Sizning natijangiz: %1$d/%2$d</string>
+    <string name="tests_with_count">Testlar (%1$d/%2$d)</string>
 </resources>

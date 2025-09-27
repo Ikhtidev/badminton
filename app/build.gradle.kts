@@ -11,7 +11,7 @@ android {
         applicationId = "uz.azimov.badminton"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
+        versionCode = 2
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -20,7 +20,6 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-//            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -54,5 +53,5 @@ dependencies {
     implementation(libs.lottie.animation)
 
     // pdfViewer
-    implementation(libs.android.pdf.viewer)
+    implementation(libs.pdf.viewer)
 }

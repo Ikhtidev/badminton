@@ -3,8 +3,8 @@ package uz.azimov.badminton.utils
 import uz.azimov.badminton.models.Chapter
 import uz.azimov.badminton.models.Theme
 
-object Constants {
-    val CHAPTERS_WITH_TOPICS: List<Chapter> = listOf(
+object ChaptersData {
+    val chapterWithTopics: List<Chapter> = listOf(
         Chapter(
             id = "modul_1",
             title = "BADMINTON FANIGA KIRISH",

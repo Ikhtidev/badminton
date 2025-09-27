@@ -17,7 +17,7 @@ import com.google.android.material.navigation.NavigationView
 import uz.azimov.badminton.R
 import uz.azimov.badminton.adapters.ThemeAdapter
 import uz.azimov.badminton.databinding.ActivityMainBinding
-import uz.azimov.badminton.utils.Constants
+import uz.azimov.badminton.utils.ChaptersData
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        val themeAdapter = ThemeAdapter(Constants.CHAPTERS_WITH_TOPICS, themeClick = { theme ->
+        val themeAdapter = ThemeAdapter(ChaptersData.chapterWithTopics, themeClick = { theme ->
             openPdfActivity(theme.themeName, theme.pdfName)
         })
         binding.rvChapters.layoutManager = LinearLayoutManager(this)
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun openPdfActivity(themeName: String, pdfName: String) {
-        val intent = Intent(this, PdfViewerActivity::class.java)
+        val intent = Intent(this, MyPdfViewerActivity::class.java)
         intent.putExtra("themeName", themeName)
         intent.putExtra("pdfName", "${pdfName}.pdf")
         startActivity(intent)
@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                  openPdfActivity(resources.getString(R.string.practical_materials), "Amaliy_mashgulot")
              }
              R.id.nav_tests -> {
-                 openPdfActivity(resources.getString(R.string.tests), "Testlar")
+                 startActivity(Intent(this, TestActivity::class.java))
              }
              R.id.nav_glossary -> {
                  openPdfActivity(resources.getString(R.string.glossary), "Glossariy")
@@ -99,7 +99,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                  startActivity(Intent(this, AboutActivity::class.java))
              }
          }
-//        drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
 

@@ -5,13 +5,16 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.rajat.pdfviewer.util.CacheStrategy
 import uz.azimov.badminton.R
-import uz.azimov.badminton.databinding.ActivityPdfViewerBinding
+import uz.azimov.badminton.databinding.ActivityMyPdfViewerBinding
+import java.io.File
+import java.io.FileOutputStream
 
-class PdfViewerActivity : AppCompatActivity() {
+class MyPdfViewerActivity : AppCompatActivity() {
 
-    private val binding: ActivityPdfViewerBinding by lazy {
-        ActivityPdfViewerBinding.inflate(layoutInflater)
+    private val binding: ActivityMyPdfViewerBinding by lazy {
+        ActivityMyPdfViewerBinding.inflate(layoutInflater)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,12 +35,16 @@ class PdfViewerActivity : AppCompatActivity() {
             btnBack.setOnClickListener {
                 finish()
             }
-            pdfView.fromAsset(fileName)
-                .enableSwipe(true)
-                .swipeHorizontal(false)
-                .enableDoubletap(false)
-                .defaultPage(0)
-                .load()
+
+            val file = File(cacheDir, fileName)
+            if (!file.exists()) {
+                assets.open(fileName).use { input ->
+                    FileOutputStream(file).use { output ->
+                        input.copyTo(output)
+                    }
+                }
+            }
+            pdfView.initWithFile(file, CacheStrategy.DISABLE_CACHE)
         }
     }
 }

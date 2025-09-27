@@ -16,10 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Badminton">
         <activity
+            android:name=".ui.TestActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.AboutActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.PdfViewerActivity"
+            android:name=".ui.MyPdfViewerActivity"
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"

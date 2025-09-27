@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
-    tools:context=".ui.PdfViewerActivity">
+    tools:context=".ui.MyPdfViewerActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,10 +51,12 @@
         app:cardCornerRadius="35dp"
         app:contentPaddingBottom="35dp">
 
-        <com.github.barteksc.pdfviewer.PDFView
+        <com.rajat.pdfviewer.PdfRendererView
             android:id="@+id/pdfView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            app:pdfView_divider="@drawable/pdf_viewer_divider"
+            app:pdfView_showDivider="true" />
 
     </androidx.cardview.widget.CardView>
 </LinearLayout>
